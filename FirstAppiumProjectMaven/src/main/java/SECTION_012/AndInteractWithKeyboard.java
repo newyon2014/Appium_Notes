@@ -21,7 +21,7 @@ public class AndInteractWithKeyboard {
      *  ****************************************************************************************
      *         - Android application examples
      *         - Key Event is a native android
-     *         - Why we need to test keyboard? To check if keyboard is shown or not and intractable
+     *         - Why we need to test keyboard? To check if keyboard is shown/displayed or not and also keyboard is interactable
      *         - Some Key events
      *             - Check if keyboard is present or not
      *             - Sending 'CAB' character sequence

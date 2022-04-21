@@ -53,12 +53,25 @@ class GesturesSwipe {
                 .release()
                 .perform();
 
+         // RECOMMENDED OPTION -  Swipe by coordinate is not recommended as screen resolution affects
+        //                        the coordinate selection from one device to another
+
 /*      int startX = startElement.getLocation().getX() + (startElement.getSize().getWidth() / 2);
+                     OR
+        int startx = size.width() / 2;
+        ------------------------------------------------------------------------------------------
         int startY = startElement.getLocation().getY() + (startElement.getSize().getHeight() / 2);
-
+                      OR
+        int startY = (int) (size.height() * 0.8 )
+         ------------------------------------------------------------------------------------------
         int endX = endElement.getLocation().getX() + (endElement.getSize().getWidth() / 2);
+                             OR
+        int endX = startX;
+         ------------------------------------------------------------------------------------------
         int endY = endElement.getLocation().getY() + (endElement.getSize().getHeight() / 2);
-
+                             OR
+        int endY = (int) (size.height() * 0.2 )
+         ------------------------------------------------------------------------------------------
         new TouchAction(driver)
                 .press(point(startX,startY))
                 .waitAction(waitOptions(ofMillis(1000)))

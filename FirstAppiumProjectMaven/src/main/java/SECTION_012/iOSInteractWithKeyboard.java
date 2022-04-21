@@ -16,6 +16,8 @@ public class iOSInteractWithKeyboard {
     /*  ****************************************************************************************
      *  **************************   WHAT IS INCLUDED AND NOTES   ******************************
      *  ****************************************************************************************
+     *         - iOS don't have native methods to perform keyboard action. But in this scneario , we can use selenium
+     *           method
      *         - Sending character sequences using iOS keyboard
      *         - Hide Keyboard
      *         - Using selenium method
@@ -52,7 +54,10 @@ public class iOSInteractWithKeyboard {
         driver.findElement(MobileBy.AccessibilityId("e")).click();
         Thread.sleep(3000);
 
-        //Hide Keyboard
+        // Presing Done botton after entering the word
+        driver.findElement(MobileBy.AccessibilityId("Done")).click();
+
+        //Hide Keyboard is available but to check if the keyboard exist ( like android) , is not available.
         //Works for simulator. For real device , might be unstable.
         driver.hideKeyboard();
 
@@ -61,6 +66,7 @@ public class iOSInteractWithKeyboard {
 
         //Closing Keyboard
         driver.getKeyboard().pressKey(Keys.RETURN); // this one don't work as there is no return option on the iOS apps
+                                                    // keyboard
         driver.findElement(MobileBy.AccessibilityId("Done")).click(); // this one will work
 
 

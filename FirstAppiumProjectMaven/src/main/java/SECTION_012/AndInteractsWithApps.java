@@ -43,8 +43,16 @@ public class AndInteractsWithApps {
         //Install
         String andAppUrl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main"
                 + File.separator + "resources" + File.separator + "ApiDemos-debug.apk";
+        driver.installApp(andAppUrl,new AndroidInstallApplicationOptions().withReplaceEnabled());
+
+        // Is installed ?
+        driver.isAppInstalled("io.appium.android.apis");
+
         //Allow Upgrade
         driver.installApp(andAppUrl, new AndroidInstallApplicationOptions().withReplaceEnabled());
+
+        // Put App to background
+        driver.runAppInBackground(Duration.ofMillis(5000)); // should return the user state
 
         //No upgrade allowed
         driver.installApp(andAppUrl, new AndroidInstallApplicationOptions().withReplaceDisabled());

@@ -34,7 +34,7 @@ public class iOSInteractsWithApps {
         //Terminate Apps
         driver.terminateApp("com.example.apple-samplecode.UICatalog");
 
-        //Install Apps
+        //Install Apps - ( for upgrade scenario - reinstall app)
         String iOSAppUrl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main"
                 + File.separator + "resources" + File.separator + "UIKitCatalog-iphonesimulator.app";
         driver.installApp(iOSAppUrl);
@@ -42,9 +42,9 @@ public class iOSInteractsWithApps {
         //Running application in background - maintains the application state
         driver.runAppInBackground(Duration.ofMillis(5000));
 
-        //Activate new apps after terminating current apps
+        //Activate new apps after terminating current apps - switching
         driver.terminateApp("com.example.apple-samplecode.UICatalog");
-        driver.activateApp("com.apple.Preferences");
+        driver.activateApp("com.apple.Preferences"); // setting application bundle ID
         Thread.sleep(5000);
         driver.activateApp("com.example.apple-samplecode.UICatalog");
 

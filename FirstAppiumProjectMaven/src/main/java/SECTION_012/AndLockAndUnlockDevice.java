@@ -34,16 +34,18 @@ public class AndLockAndUnlockDevice {
 
         //Pin
         //unlockType and unlockKey capability needed when drivers are initialized
-        //caps.setCapability("unlockType", "pin");
-        //caps.setCapability("unlockKey", "1111");
+        // The following are appium capabilities that need to be added as part of driver initialization
+              //caps.setCapability("unlockType", "pin");
+              //caps.setCapability("unlockKey", "1111");
         ((AndroidDriver) driver).lockDevice();
         System.out.println(((AndroidDriver) driver).isDeviceLocked());
         ((AndroidDriver) driver).unlockDevice();
 
         //Pattern
         //unlockType and unlockKey capability needed when drivers are initialized
-        //caps.setCapability("unlockType", "pattern");
-        //caps.setCapability("unlockKey", "125478963");
+        // The following are appium capabilities that need to be added as part of driver initialization
+              //caps.setCapability("unlockType", "pattern");
+              //caps.setCapability("unlockKey", "125478963");
         ((AndroidDriver) driver).lockDevice();
         System.out.println(((AndroidDriver) driver).isDeviceLocked());
         ((AndroidDriver) driver).unlockDevice();

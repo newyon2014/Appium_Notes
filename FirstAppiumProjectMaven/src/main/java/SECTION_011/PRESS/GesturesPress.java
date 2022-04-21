@@ -27,17 +27,21 @@ class GesturesPress {
                 .perform();
 
         // Using LongPressOptions class
+            // Long press option
         t.longPress(LongPressOptions.longPressOptions().
                         withElement(ElementOption.element(driver.findElement(accessibility))))
                 .waitAction(WaitOptions.waitOptions(Duration.ofMillis(5000)))
                 .release()
                 .perform();
+            // Element Option - Non static
+                 t.longPress(ElementOption.element(driver.findElement(accessibility)))
+                         .waitAction(WaitOptions.waitOptions(Duration.ofMillis(5000)));
 
-        // OPTION II - Importing Element Option and waitOption statically
-/*        t.longPress(element(driver.findElement(accessibility)))
-                .waitAction(waitOptions(Duration.ofMillis(5000)))
-                .release()
-                .perform();*/
+            // Importing Element Option and waitOption statically
+/*                 t.longPress(element(driver.findElement(accessibility)))
+                         .waitAction(waitOptions(Duration.ofMillis(5000)))
+                         .release()
+                         .perform();*/
     }
 }
 //TAP, PRESS, LONGPRESS, WAITACTION, RELEASE, PERFORM, MOVETO
