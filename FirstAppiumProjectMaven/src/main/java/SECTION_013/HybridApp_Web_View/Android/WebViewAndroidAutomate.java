@@ -56,7 +56,7 @@ public class WebViewAndroidAutomate {
             // Using a static name
                driver.context("WEBVIEW");
             // Using context generated at runtime - preferred
-               driver.context(contextHandles.toArray()[1].toString()); // First one is a Native context
+               driver.context(contextHandles.toArray()[1].toString()); // Zeroth Position - Native context and First position - Web View context
 
         System.out.println(driver.findElement(By.cssSelector("body > h1")).getText());
         System.out.println(driver.findElement(By.xpath("//*[@id=\"i_am_a_textbox\"]")).getText());

@@ -13,7 +13,7 @@ import java.time.Duration;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public class WebViewiOSSimAutomate {
+public class WebViewiOSSimulatorAutomate {
     /*  ****************************************************************************************
      *  **************************   WHAT IS INCLUDED AND NOTES   ******************************
      *  ****************************************************************************************

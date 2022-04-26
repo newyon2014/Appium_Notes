@@ -1,4 +1,4 @@
-package SECTION_013;
+package SECTION_013.HybridApp_Web_View.Android;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -26,7 +26,9 @@ public class CreateBrowserSession {
                 //       caps.setCapability("avd", "Pixel_3");
                 //       caps.setCapability("avdLaunchTimeout", 180000);
                 caps.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
-                caps.setCapability("chromedriverExecutable", "/Users/Om/Downloads/chromedriver");
+
+                caps.setCapability("chromedriverExecutable", "/Users/Om/Downloads/chromedriver"); // non-default directory setting for chrome driver executable download
+
 //                caps.setCapability("chromedriverExecutableDir", "/Users/Om/Downloads/ChromeDriverDir");
                 return new AndroidDriver(url, caps);
             case "iOS":

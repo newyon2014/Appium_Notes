@@ -1,6 +1,6 @@
 package SECTION_013.Browser;
 
-import SECTION_013.CreateBrowserSession;
+import SECTION_013.HybridApp_Web_View.Android.CreateBrowserSession;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
